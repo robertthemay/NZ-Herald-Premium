@@ -1,0 +1,20 @@
+  {
+    "manifest_version": 2,
+    "name": "NZ Herald Premium",
+    "version": "1.0",
+    "permissions": [
+        "*://*.nzherald.co.nz/*"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.nzherald.co.nz/*"
+            ],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+          }
+    ],
+
+    "web_accessible_resources": ["patch.js"]
+  }
